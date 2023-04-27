@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="IMC Meu Cara Colega Muito ou Nem tanto Saudavel">
+        <div class="slds-m-around_small">
+            <lightning-input label="Nome" type="text" name="nome" onchange={hendleCaptar}></lightning-input>
+            <lightning-input label="Peso" type="number" name="peso" onchange={hendleCaptar}></lightning-input>
+            <lightning-input label="Altura" type="number" name="altura" onchange={hendleCaptar}></lightning-input>
+            <br/>
+            <lightning-button label="Calcular IMC" onclick={calcularIMC}></lightning-button>
+            <div if:true={mensagem}>
+                <p>{mensagem}</p>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Handle com Spread EX2">
+        <div class="slds-m-around_small"><!--Lembrar de ver os types na documentação lighting input-->
+            <lightning-input label="Primero Nome" type="text" name="nome" onchange={handleSpread}></lightning-input>
+            <lightning-input label="Sobrenome" type="text" name="sobre" onchange={handleSpread}></lightning-input>
+            <lightning-input label="Email" type="email" name="email" onchange={handleSpread}></lightning-input>
+            <lightning-input label="Website" type="url" name="site" onchange={handleSpread}></lightning-input>
+            <lightning-input label="Empresa" type="text " name="empresa" onchange={handleSpread}></lightning-input>
+            <lightning-input label="Receita Anual" type="number" name="receita" onchange={handleSpread}></lightning-input>
+            <lightning-button label="Enviar" onclick={cliqueMostra}></lightning-button>
+
+            <div if:true={controlador}>
+                <h1>Seu nome é: {nome1} {sobre1}</h1>
+                <p>Email : {email1}</p>
+                <p>Website : {site1}</p>
+                <p>Empresa : {empresa1}</p>
+                <p>Receita Anual: R${receita1}</p>
+            </div>
+        </div>
+    </lightning-card>
+</template>
